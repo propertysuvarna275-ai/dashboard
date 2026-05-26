@@ -1,0 +1,12 @@
+admin@propel.local
+
+
+silahkan rapikan
+
+1. apakah udaha aman dan database uda di ubah ke neon agar bisa di akses semua karyawan
+
+2. aku mau deploy di vercel silahkan buatkan step by stepnya
+
+3. saat menambahkan database atau client tidak perlu mencantumkan marketing siapa yang menambahkan dari akun itu maka itu marketingnya tambahkan itu otomatis begitupun follow up siapa yang follow up tetrulis langsung di history berdasarkan akun yang update
+
+4. marketing bisa nambah client juga yang sewajarnya marketing aja asal jangan edit atau hapus dan akses admin

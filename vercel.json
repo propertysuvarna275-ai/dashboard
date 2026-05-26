@@ -1,0 +1,15 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/admin", "destination": "/admin.html" },
+    { "source": "/dashboard", "destination": "/dashboard.html" },
+    { "source": "/login", "destination": "/login.html" },
+    { "source": "/lead", "destination": "/lead.html" },
+    { "source": "/konsumen", "destination": "/lead.html" },
+    { "source": "/tambah-konsumen", "destination": "/add-client.html" },
+    { "source": "/laporan", "destination": "/laporan.html" },
+    { "source": "/detail-client", "destination": "/detail-client.html" }
+  ]
+}

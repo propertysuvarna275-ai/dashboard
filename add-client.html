@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>Propel CRM - Input Konsumen Baru</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-primary": "#ffffff",
+                "secondary-container": "#dae2fd",
+                "inverse-on-surface": "#eaf1ff",
+                "tertiary-fixed-dim": "#ffb95f",
+                "secondary-fixed": "#dae2fd",
+                "surface-bright": "#f8f9ff",
+                "on-surface-variant": "#3c4a42",
+                "tertiary-fixed": "#ffddb8",
+                "secondary-fixed-dim": "#bec6e0",
+                "on-surface": "#0b1c30",
+                "surface": "#f8f9ff",
+                "outline-variant": "#bbcabf",
+                "primary": "#006c49",
+                "on-secondary-container": "#5c647a",
+                "on-secondary-fixed-variant": "#3f465c",
+                "on-error-container": "#93000a",
+                "outline": "#6c7a71",
+                "primary-container": "#10b981",
+                "surface-variant": "#d3e4fe",
+                "secondary": "#565e74",
+                "on-secondary-fixed": "#131b2e",
+                "primary-fixed-dim": "#4edea3",
+                "surface-container-highest": "#d3e4fe",
+                "surface-tint": "#006c49",
+                "on-secondary": "#ffffff",
+                "tertiary": "#855300",
+                "on-tertiary-container": "#523200",
+                "on-primary-fixed-variant": "#005236",
+                "on-primary-container": "#00422b",
+                "inverse-surface": "#213145",
+                "on-background": "#0b1c30",
+                "primary-fixed": "#6ffbbe",
+                "tertiary-container": "#e29100",
+                "surface-dim": "#cbdbf5",
+                "error": "#ba1a1a",
+                "inverse-primary": "#4edea3",
+                "on-error": "#ffffff",
+                "surface-container-low": "#eff4ff",
+                "on-primary-fixed": "#002113",
+                "surface-container-lowest": "#ffffff",
+                "error-container": "#ffdad6",
+                "on-tertiary": "#ffffff",
+                "surface-container": "#e5eeff",
+                "on-tertiary-fixed": "#2a1700",
+                "on-tertiary-fixed-variant": "#653e00",
+                "surface-container-high": "#dce9ff",
+                "background": "#f8f9ff"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "stack-sm": "4px",
+                "stack-md": "12px",
+                "base": "8px",
+                "gutter": "24px",
+                "container-margin-desktop": "32px",
+                "container-margin-mobile": "16px",
+                "stack-lg": "24px"
+            },
+            "fontFamily": {
+                "label-bold": ["Inter"],
+                "body-md": ["Inter"],
+                "headline-md": ["Inter"],
+                "headline-md-mobile": ["Inter"],
+                "display-lg": ["Inter"],
+                "label-sm": ["Inter"],
+                "title-sm": ["Inter"],
+                "body-sm": ["Inter"]
+            },
+            "fontSize": {
+                "label-bold": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                "headline-md-mobile": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                "display-lg": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                "title-sm": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+                "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        .form-shadow { box-shadow: 0px 1px 3px rgba(0,0,0,0.05), 0px 10px 15px -5px rgba(0,0,0,0.05); }
+        .tap-highlight-transparent { -webkit-tap-highlight-color: transparent; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-on-background shadow-[0px_1px_3px_rgba(0,0,0,0.05)] sticky top-0 z-50 flex justify-between items-center w-full px-container-mobile h-16">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-secondary-container flex items-center justify-center">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="A professional headshot of a real estate agent in a modern business suit. The background is a blurred high-end office environment with soft morning light. The color palette is clean and professional with neutral tones and a hint of growth-oriented green accents. The aesthetic is sharp, trustworthy, and high-functionality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGr8vVhcva0-CxG42twfzho5xRR0zkLj_6sV_cu4ph5Zp3i0-9RUj6ByvwIVMR2ScvcZWRKYikSGKyW-5YR22Yu18zZ4Ab0lb7JgH58hnj8RDraS94RvgNhTRnpZ7LXWc37ENl2z0izJWXkYK8uzWp3BWzdzhOy47x_LfTfXFMZbuy8MU6r0ajvy1dL9T8Sh9P2PBCpShy2zj4S_jA_ygshtj5CVLtrRv28AYjWzBxTthv8nfVRkIxeF2mOC2VrhRkdbmBG2FOUWQ"/>
+</div>
+<h1 class="font-title-sm text-title-sm text-primary dark:text-primary-fixed font-bold">Propel CRM</h1>
+</div>
+<button class="material-symbols-outlined text-primary dark:text-primary-fixed transition-transform active:scale-90" data-icon="notifications">notifications</button>
+</header>
+<!-- Main Content Canvas -->
+<main class="px-container-mobile pt-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
+<div class="mb-gutter">
+<h2 class="font-headline-md-mobile text-headline-md-mobile text-on-surface mb-2">Tambah Konsumen</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Lengkapi data prospek properti baru untuk mulai memantau performa penjualan Anda.</p>
+</div>
+<form class="space-y-gutter" id="lead-form">
+<!-- Form Card -->
+<div class="bg-surface-container-lowest rounded-xl p-stack-lg border border-outline-variant/30 form-shadow">
+<!-- Nama Konsumen -->
+<div class="mb-stack-lg">
+<label class="block font-label-bold text-label-bold text-on-surface-variant uppercase mb-2">Nama Konsumen</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline" data-icon="person">person</span>
+<input class="w-full pl-10 pr-4 py-3 bg-white border border-outline-variant rounded-xl focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all font-body-md text-body-md placeholder:text-outline/60" placeholder="Contoh: Budi Santoso" type="text"/>
+</div>
+</div>
+<!-- No WhatsApp -->
+<div class="mb-stack-lg">
+<label class="block font-label-bold text-label-bold text-on-surface-variant uppercase mb-2">No WhatsApp</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline" data-icon="call">call</span>
+<input class="w-full pl-10 pr-4 py-3 bg-white border border-outline-variant rounded-xl focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all font-body-md text-body-md placeholder:text-outline/60" placeholder="081234567890" type="tel"/>
+</div>
+</div>
+<!-- Sumber Leads -->
+<div class="mb-stack-lg">
+<label class="block font-label-bold text-label-bold text-on-surface-variant uppercase mb-2">Sumber Leads</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline" data-icon="share">share</span>
+<select class="w-full pl-10 pr-10 py-3 bg-white border border-outline-variant rounded-xl focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all font-body-md text-body-md appearance-none">
+<option value="">Pilih Sumber</option>
+<option value="FB">Facebook Ads</option>
+<option value="IG">Instagram</option>
+<option value="WA">WhatsApp Blast</option>
+<option value="Organic">Pencarian Organik</option>
+<option value="Referral">Referral</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline pointer-events-none" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+<!-- Grid Status & Kavling -->
+<div class="grid grid-cols-2 gap-stack-md mb-stack-lg">
+<div>
+<label class="block font-label-bold text-label-bold text-on-surface-variant uppercase mb-2">Status</label>
+<div class="relative">
+<select class="w-full px-4 py-3 bg-white border border-outline-variant rounded-xl focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all font-body-md text-body-md appearance-none">
+<option value="Hot">Hot Lead</option>
+<option value="Warm">Warm</option>
+<option value="Cold">Cold</option>
+<option value="Booked">Booked</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline pointer-events-none" data-icon="stat_1">stat_1</span>
+</div>
+</div>
+<div>
+<label class="block font-label-bold text-label-bold text-on-surface-variant uppercase mb-2">Kavling</label>
+<div class="relative">
+<input class="w-full px-4 py-3 bg-white border border-outline-variant rounded-xl focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all font-body-md text-body-md placeholder:text-outline/60" placeholder="A-12" type="text"/>
+</div>
+</div>
+</div>
+<!-- Keterangan -->
+<div>
+<label class="block font-label-bold text-label-bold text-on-surface-variant uppercase mb-2">Keterangan</label>
+<textarea class="w-full px-4 py-3 bg-white border border-outline-variant rounded-xl focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all font-body-md text-body-md placeholder:text-outline/60 resize-none" placeholder="Tambahkan catatan khusus mengenai minat konsumen..." rows="4"></textarea>
+</div>
+</div>
+<!-- Submit Button Section -->
+<div class="pt-4">
+<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-headline-md-mobile text-headline-md-mobile font-bold shadow-lg shadow-primary/20 active:scale-95 transition-transform flex items-center justify-center gap-2" type="submit">
+<span class="material-symbols-outlined" data-icon="save" data-weight="fill">save</span>
+                    Simpan Data
+                </button>
+</div>
+</form>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 bg-surface-container-lowest px-4 pb-safe border-t border-outline-variant dark:border-outline shadow-[0px_-1px_3px_rgba(0,0,0,0.05)] rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-on-secondary-container dark:text-secondary-fixed-dim hover:bg-secondary-container/20 px-4 py-2 rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-sm text-label-sm mt-1">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed relative after:content-[''] after:w-1 after:h-1 after:bg-primary after:rounded-full after:mt-1 hover:bg-secondary-container/20 px-4 py-2 rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="group" style="font-variation-settings: 'FILL' 1;">group</span>
+<span class="font-label-sm text-label-sm mt-1">Leads</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-container dark:text-secondary-fixed-dim hover:bg-secondary-container/20 px-4 py-2 rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-label-sm text-label-sm mt-1">Reports</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-container dark:text-secondary-fixed-dim hover:bg-secondary-container/20 px-4 py-2 rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-sm text-label-sm mt-1">Settings</span>
+</a>
+</nav>
+<script>
+        // Simple micro-interaction for form submission
+        document.getElementById('lead-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = e.submitter;
+            const originalText = btn.innerHTML;
+            
+            btn.disabled = true;
+            btn.innerHTML = `
+                <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                Menyimpan...
+            `;
+            
+            setTimeout(() => {
+                btn.classList.replace('bg-primary', 'bg-primary-container');
+                btn.innerHTML = `<span class="material-symbols-outlined">check_circle</span> Berhasil Disimpan`;
+                
+                setTimeout(() => {
+                    btn.disabled = false;
+                    btn.classList.replace('bg-primary-container', 'bg-primary');
+                    btn.innerHTML = originalText;
+                    document.getElementById('lead-form').reset();
+                }, 2000);
+            }, 1500);
+        });
+
+        // Add subtle focus effect on the whole card
+        const inputs = document.querySelectorAll('input, select, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.closest('.bg-surface-container-lowest').classList.add('ring-1', 'ring-primary/10');
+            });
+            input.addEventListener('blur', () => {
+                input.closest('.bg-surface-container-lowest').classList.remove('ring-1', 'ring-primary/10');
+            });
+        });
+    </script>
+<script src="crm.js"></script>
+</body></html>
